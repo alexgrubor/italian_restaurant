@@ -1,35 +1,35 @@
 <?php require "../config/config.php"; ?>
 <?php require "../libs/App.php"; ?>
 <?php require "../includes/header.php"; ?>
-<?php 
+<?php
 
 
-    $app = new App;
-   $app -> validateSession();
+$app = new App;
+$app->validateSession();
 
-    if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-        $query = "SELECT * FROM users WHERE email='$email'";
+    $query = "SELECT * FROM users WHERE email='$email'";
 
-        $data = [
-            "email" =>  $email,
-            "password" =>  $password,
-        ];
+    $data = [
+        "email" => $email,
+        "password" => $password,
+    ];
 
-        $path = "http://localhost/restoran";
+    $path = "http://localhost/restoran";
 
-        $app->login($query, $data, $path);
+    $app->login($query, $data, $path);
 
-    }
+}
 
 
 
 ?>
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class="container-xxl py-5 bg-success hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Login</h1>
                     <nav aria-label="breadcrumb">
@@ -47,7 +47,7 @@
         <!-- Service Start -->
             <div class="container">
                 
-                <div class="col-md-12 bg-dark">
+                <div class="col-md-12 bg-success">
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Login</h5>
                         <h1 class="text-white mb-4">Login</h1>
@@ -80,4 +80,4 @@
         <!-- Service End -->
         
 
-        <?php require "../includes/footer.php";?>
+        <?php require "../includes/footer.php"; ?>

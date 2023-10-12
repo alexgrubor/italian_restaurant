@@ -58,7 +58,7 @@ define("APPIMAGES", "http://localhost/restoran/admin-panel/foods-admins/foods-im
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-success bg-success px-4 px-lg-5 py-3 py-lg-2">
                 <a href="" class="navbar-brand p-0">
                     <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restaurant</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
@@ -74,28 +74,28 @@ define("APPIMAGES", "http://localhost/restoran/admin-panel/foods-admins/foods-im
                         <a href="<?php echo APPURL; ?>/contact.php" class="nav-item nav-link">Contact</a>
                         <?php if (isset($_SESSION['username'])): ?>
 
-                            <a href="cart.html" class="nav-item nav-link"><i
-                                    class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <?php echo $_SESSION['username']; ?>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item"
-                                            href="<?php echo APPURL; ?>/users/bookings.php">Bookings</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/users/orders.php">Orders</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/auth/logout.php">Logout</a>
-                                    </li>
-                                </ul>
-                            </li>
+                                <a href="cart.html" class="nav-item nav-link"><i
+                                        class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <?php echo $_SESSION['username']; ?>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item"
+                                                href="<?php echo APPURL; ?>/users/bookings.php">Bookings</a></li>
+                                        <li><a class="dropdown-item" href="<?php echo APPURL; ?>/users/orders.php">Orders</a>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="<?php echo APPURL; ?>/auth/logout.php">Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
                         <?php else: ?>
-                            <a href="<?php echo APPURL; ?>/auth/login.php" class="nav-item nav-link">Login</a>
-                            <a href="<?php echo APPURL; ?>/auth/register.php" class="nav-item nav-link">Register</a>
+                                <a href="<?php echo APPURL; ?>/auth/login.php" class="nav-item nav-link">Login</a>
+                                <a href="<?php echo APPURL; ?>/auth/register.php" class="nav-item nav-link">Register</a>
                         <?php endif; ?>
                     </div>
 

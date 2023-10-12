@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<div class="container-xxl py-5 bg-dark hero-header mb-5">
+<div class="container-xxl py-5 bg-success hero-header mb-5">
     <div class="container text-center my-5 pt-5 pb-4">
         <h1 class="display-3 text-white mb-3 animated slideInDown">Registration</h1>
         <nav aria-label="breadcrumb">
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 <!-- Service Start -->
 <div class="container">
 
-    <div class="col-md-12 bg-dark">
+    <div class="col-md-12 bg-success">
         <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
             <h5 class="section-title ff-secondary text-start text-primary fw-normal">Register</h5>
             <h1 class="text-white mb-4">Register for a new user</h1>
