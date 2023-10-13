@@ -52,6 +52,12 @@ class App
         }
 
     }
+    public function validateCart($q) {
+        $row = $this->link->query($q);
+        $row->execute();
+        $count = $row->rowCount();
+        return $count;
+    }
     public function insert($query, $array, $path)
     {
         if ($this->validate($array) == "empty") {
@@ -61,7 +67,7 @@ class App
             $insert_record->execute($array);
 
             if ($insert_record) {
-                header("location: $path");
+                echo "<script>window.location.href='".$path."'</script>";
             } else {
                 echo "<script>alert('record not inserted')</script>";
             }
@@ -88,11 +94,7 @@ class App
         $delete_record = $this->link->prepare($query);
         $delete_record->execute();
 
-        if ($delete_record) {
-            header("location: $path");
-        } else {
-            echo "<script>alert('record not deleted')</script>";
-        }
+        echo "<script>window.location.href='".$path."'</script>";
     }
     public function validate($array)
     {
