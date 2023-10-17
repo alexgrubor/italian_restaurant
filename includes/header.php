@@ -73,6 +73,7 @@ define("APPIMAGES", "http://localhost/restoran/admin-panel/foods-admins/foods-im
                         <a href="<?php echo APPURL; ?>/about.php" class="nav-item nav-link display-6">About</a>
                         <a href="<?php echo APPURL; ?>/service.php" class="nav-item nav-link display-6">Service</a>
                         <a href="<?php echo APPURL; ?>/contact.php" class="nav-item nav-link display-6">Contact</a>
+                        <a href="<?php echo APPURL; ?>/booking.php" class="nav-item nav-link display-6">Booking</a>
                         <?php if (isset($_SESSION['username'])): ?>
 
                                 <a href="food/cart.php" class="nav-item nav-link display-6"><i

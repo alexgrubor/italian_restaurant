@@ -126,7 +126,9 @@ class App
         $fetch = $login_user->fetch(PDO::FETCH_ASSOC);
 
         if ($login_user->rowCount() > 0) {
+          
             if (password_verify($data['password'], $fetch['password'])) {
+            
                 $_SESSION['email'] = $fetch['email'];
                 $_SESSION['user_id'] = $fetch['id'];
                 $_SESSION['username'] = $fetch['username'];
@@ -145,6 +147,17 @@ class App
     {
         if (isset($_SESSION['user_id'])) {
             echo "<script>window.location.href='".APPURL."'</script>";
+        }
+    }
+    public function validateSessionAdmin() {
+        if(isset($_SESSION['email'])) {
+            echo "<script>window.location.href='".ADMINURL."/index.php'</script>";
+        }
+    }
+
+    public function validateSessionAdminInside() {
+        if(!isset($_SESSION['email'])) {
+            echo "<script>window.location.href='".ADMINURL."/admins/login-admins.php'</script>";
         }
     }
 }
